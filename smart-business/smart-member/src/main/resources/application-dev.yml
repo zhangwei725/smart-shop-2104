@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://10.3.50.156:3306/smart_member?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: root
+#error
+#  info 生产环境日志级别
+logging:
+  level:
+    # 开发日志级别
+    com.smart.member.mapper: debug
+
+#<bean id class="SQLsessionfactory" >
+#<property url= "">
+#<property username= "root">
+#<property url= "">
+#<property url= "">
+#</bean>
