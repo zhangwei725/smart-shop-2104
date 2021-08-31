@@ -15,5 +15,6 @@
     <modules>
         <module>smart-common-base</module>
         <module>smart-common-db</module>
+        <module>smart-common-swagger</module>
     </modules>
 </project>

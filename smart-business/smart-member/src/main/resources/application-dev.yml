@@ -1,9 +1,27 @@
 spring:
   datasource:
     druid:
-      url: jdbc:mysql://10.3.50.156:3306/smart_member?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      url: "jdbc:mysql://10.3.50.156:3306/smart_ums_member?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false"
       username: root
       password: root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "10.3.50.45:8848"
+        namespace: babd3d47-3ae3-4dcb-a6b1-e500e7977184
+    # 将应用程序注册Sentinel
+    sentinel:
+      transport:
+        dashboard: "10.3.50.45:8088"
+
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  sentinel:
+    enabled: true
+
 #error
 #  info 生产环境日志级别
 logging:
@@ -16,4 +34,5 @@ logging:
 #<property username= "root">
 #<property url= "">
 #<property url= "">
+
 #</bean>

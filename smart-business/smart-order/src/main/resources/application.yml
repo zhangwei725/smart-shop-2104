@@ -1,0 +1,31 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: "smart-order"
+  datasource:
+    druid:
+      url: "jdbc:mysql://10.3.50.156:3306/smart_oms_order?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false"
+      username: root
+      password: root
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "10.3.50.45:8848"
+        namespace: babd3d47-3ae3-4dcb-a6b1-e500e7977184
+
+logging:
+  level:
+    com.smart.order.mapper: debug
+
+# 请求url地址的命名风格
+# 针对四种请求
+# 尽量使用名字
+# post    /api/v1.0/order/
+# get     /api/v1.0/order/ 获取订单信息
+# put     /api/v1.0/order/
+# delete  /api/v1.0/order/list
+
+
+

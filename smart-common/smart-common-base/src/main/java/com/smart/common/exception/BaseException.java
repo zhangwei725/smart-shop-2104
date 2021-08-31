@@ -9,7 +9,6 @@ public class BaseException extends RuntimeException {
     private int status;
     private ResponseCode responseCode;
 
-
     public BaseException(ResponseCode responseCode) {
         super(responseCode.getMsg());
         this.msg = responseCode.getMsg();

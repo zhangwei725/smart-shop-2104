@@ -15,6 +15,7 @@
     <modules>
         <module>smart-order</module>
         <module>smart-member</module>
+        <module>smart-web</module>
     </modules>
 
 </project>

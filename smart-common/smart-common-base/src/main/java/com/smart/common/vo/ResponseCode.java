@@ -13,10 +13,8 @@ public enum ResponseCode {
      */
     SUCCESS(200, "success", "成功"),
     ERROR(40000, "error", "错误"),
-    // 用户相关
-    UN_LOGIN(40001, "no login", "未登录"),
-    UN_AUTH(40003, "no auth  account", "未授权"),
 
+    UN_AUTH(40003, "no auth  account", "没有相关权限"),
     /*用户未登录*/
     ACCOUNT_NOT_LOGIN(10001, "user no login", "用户未登录"),
     /*账号不存在或密码错误*/
@@ -61,7 +59,13 @@ public enum ResponseCode {
     /*接口地址无效*/
     NO_FOUND_ERROR(50004, "no found error", "接口地址无效"),
     /* 数据错误 */
-    DATA_IS_WRONG(60001, "data is wrong", "数据错误");
+    DATA_IS_WRONG(60001, "data is wrong", "数据错误"),
+
+
+    /**
+     * -======= 订单相关状态码 ============
+     */
+    ORDER_STOCK_NO(70001, "no kun  cun", "商品库存不足");
 
     /**
      * 返回码

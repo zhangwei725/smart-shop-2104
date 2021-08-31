@@ -1,0 +1,13 @@
+server:
+  port: 8880
+
+spring:
+  application:
+    name: "web-server"
+  profiles:
+    active: "common-mysql"
+  datasource:
+    druid:
+      url: "jdbc:mysql://10.3.50.156:3306/smart_oms_order?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false"
+      username: root
+      password: root
