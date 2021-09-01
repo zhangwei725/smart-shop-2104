@@ -13,11 +13,8 @@ spring:
       discovery:
         server-addr: "10.3.50.45:8848"
         namespace: babd3d47-3ae3-4dcb-a6b1-e500e7977184
-    sentinel:
-      transport:
-        dashboard: 10.3.50.45:8088'
-      # 立即加载
-      eager: true
+
+
 logging:
   level:
     com.smart.order.mapper: debug

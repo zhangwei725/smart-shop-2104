@@ -18,6 +18,7 @@
     <modules>
         <module>smart-common</module>
         <module>smart-business</module>
+        <module>smart-pay</module>
     </modules>
     <!--   2 版本号统一声明 -->
     <properties>
@@ -30,7 +31,7 @@
         <shiro.starter.version>1.7.1</shiro.starter.version>
         <spring.cloud.version>2020.0.1</spring.cloud.version>
         <spring.cloud.alibaba.version>2021.1</spring.cloud.alibaba.version>
-
+        <pay.api.version>1.0.0-SNAPSHOT</pay.api.version>
     </properties>
     <!--    3 可选依赖 -->
     <dependencyManagement>
@@ -90,9 +91,14 @@
                 <artifactId>shiro-spring-boot-web-starter</artifactId>
                 <version>${shiro.starter.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.smart</groupId>
+                <artifactId>pay-api</artifactId>
+                <version>${pay.api.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
-
     <!--  4  必要依赖-->
     <dependencies>
         <dependency>

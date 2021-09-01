@@ -1,0 +1,20 @@
+server:
+  port: 8880
+spring:
+  application:
+    name: smart-pay
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "10.3.50.45:8848"
+        namespace: 310ead47-2894-46c0-a656-055ee6cf4be7
+dubbo:
+  cloud:
+    subscribed-services: "smart-pay-ali,smart-pay-wx"
+  protocol:
+    serialization: kryo
+    name: "dubbo"
+    port: -1
+  registry:
+    address: nacos://${spring.cloud.nacos.discovery.server-addr}
+    parameters[namespace]: ${spring.cloud.nacos.discovery.namespace}
