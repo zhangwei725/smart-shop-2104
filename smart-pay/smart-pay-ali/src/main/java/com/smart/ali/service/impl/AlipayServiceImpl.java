@@ -7,9 +7,11 @@ import com.alipay.easysdk.payment.page.models.AlipayTradePagePayResponse;
 import com.smart.ali.service.AliPayService;
 import com.smart.pay.alipay.AliPayApiService;
 import com.smart.pay.reqeust.AliPayRequestParam;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class AlipayServiceImpl implements AliPayService {
     //    @Override
 //    public String pay(int client, AliPayRequestParam payRequestParam) throws Exception {
@@ -24,6 +26,7 @@ public class AlipayServiceImpl implements AliPayService {
     public String webPay(AliPayRequestParam payRequestParam) throws Exception {
         AlipayTradePagePayResponse response = Factory.Payment.Page().pay(payRequestParam.getSubject(),
                 payRequestParam.getOutRradeNo(), payRequestParam.getTotalAmount(), "https://www.baidu.com");
+        log.info(response.getBody().replace('\"', '\''));
         return response.getBody();
     }
 

@@ -1,6 +1,7 @@
 package com.smart.member.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.smart.common.member.MemberDto;
 import com.smart.common.vo.ResponseResult;
 import com.smart.member.api.OrderApi;
 import com.smart.member.common.dto.OrderDto;
@@ -8,6 +9,7 @@ import com.smart.member.entity.Member;
 import com.smart.member.mapper.MemberMapper;
 import com.smart.member.common.request.MemeberReqeust;
 import com.smart.member.service.MemberService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -21,8 +23,11 @@ public class MemberServiceImpl implements MemberService {
 
 
     @Override
-    public Member findByName(String username) {
-        return memberMapper.selectByUsername(username);
+    public MemberDto findByName(String username) {
+        Member member = memberMapper.selectByUsername(username);
+        MemberDto memberDto = new MemberDto();
+        BeanUtils.copyProperties(member, memberDto);
+        return memberDto;
     }
 
     @Override

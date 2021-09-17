@@ -36,7 +36,7 @@ import java.util.stream.Collectors;
  * po  持久化对象  数据层的入口参数 返回参数
  * vo  视图对象  作为控制层返回对象  业务层返回vo对象  pc端  移动端
  * qo  请求参数  控制层入口参数    业务层入口参数
- * dto 服务跟服务之间数据传输对象   业务层的返回对象
+ * com.smart.member.dto 服务跟服务之间数据传输对象   业务层的返回对象
  */
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -106,6 +106,9 @@ public class OrderServiceImpl implements OrderService {
         List<Long> cartIds = carts.stream().map(Cart::getCartId).collect(Collectors.toList());
         //删除购物车信息
         delCarts(cartIds);
+
+
+
         return OrderVo.builder()
                 .total(bigDecimal)
                 .orderNo(orderNo)
@@ -173,7 +176,7 @@ public class OrderServiceImpl implements OrderService {
         }
     }
 
-    //po对象转化 dto
+    //po对象转化 com.smart.member.dto
     @Override
     public Page<OrderDto> getOrdersByMemberId(Long memberId, Integer page, Integer size) {
         Page<Order> orderPage = orderMapper.selectOrdersByMemberId(memberId, page, size);

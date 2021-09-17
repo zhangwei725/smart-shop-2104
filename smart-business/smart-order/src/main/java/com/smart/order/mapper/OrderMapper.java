@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.smart.order.entity.Order;
+import org.apache.ibatis.annotations.Param;
 
 public interface OrderMapper extends BaseMapper<Order> {
 
@@ -13,4 +14,7 @@ public interface OrderMapper extends BaseMapper<Order> {
         qw.lambda().eq(Order::getMemberId, memberId).eq(Order::getStatus, 1);
         return this.selectPage(page, qw);
     }
+
+
+    int updateOrder(@Param("orderNo") String orderNo);
 }

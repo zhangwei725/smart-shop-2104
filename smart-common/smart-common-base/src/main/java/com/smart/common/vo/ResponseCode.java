@@ -45,6 +45,11 @@ public enum ResponseCode {
     BUSINESS_UNKNOW_ERROR(30001, " busy with business", "业务繁忙 请稍后在试"),
     SYSTEM_ERROR(99999, "system  error", "接口错误"),
 
+
+
+
+
+
     /* ======系统错误：40001-49999===== */
     /* 提示语 "系统繁忙，请稍后重试"*/
     SYSTEM_INNER_ERROR(40001, "system error", "系统繁忙，请稍后重试"),

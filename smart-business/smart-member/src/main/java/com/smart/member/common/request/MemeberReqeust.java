@@ -16,9 +16,4 @@ public class MemeberReqeust {
     @NotNull
     private String password;
 
-    // 手机号 + 验证码  type  1
-    // 账号 + 密码     type
-    // 第三方的登录
-    // 扫二维码登录
-
 }

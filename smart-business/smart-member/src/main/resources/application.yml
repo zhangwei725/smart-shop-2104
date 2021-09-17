@@ -6,15 +6,3 @@ spring:
     name: smart-member
   profiles:
     active: common-mysql,dev
-
-
-
-
-shiro:
-  path-list:
-    - "/member/login"
-    - "/member/register"
-    - "/noauth"
-    - "/member/orders"
-  logout-path: "/member/logout"
-  loginUrl: /noauth

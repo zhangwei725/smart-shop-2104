@@ -19,6 +19,9 @@
         <module>smart-common</module>
         <module>smart-business</module>
         <module>smart-pay</module>
+        <module>smart-api-gateway</module>
+        <module>smart-auth</module>
+        <module>smart-admin</module>
     </modules>
     <!--   2 版本号统一声明 -->
     <properties>
@@ -31,6 +34,7 @@
         <shiro.starter.version>1.7.1</shiro.starter.version>
         <spring.cloud.version>2020.0.1</spring.cloud.version>
         <spring.cloud.alibaba.version>2021.1</spring.cloud.alibaba.version>
+        <spring.cloud.scurity.version>2.2.5.RELEASE</spring.cloud.scurity.version>
         <pay.api.version>1.0.0-SNAPSHOT</pay.api.version>
     </properties>
     <!--    3 可选依赖 -->
@@ -96,7 +100,11 @@
                 <artifactId>pay-api</artifactId>
                 <version>${pay.api.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-security</artifactId>
+                <version>${spring.cloud.scurity.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <!--  4  必要依赖-->

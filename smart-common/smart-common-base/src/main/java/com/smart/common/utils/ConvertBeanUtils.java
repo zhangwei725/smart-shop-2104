@@ -10,7 +10,6 @@ import java.util.function.Supplier;
  * @author Mr Pan
  */
 public class ConvertBeanUtils extends BeanUtils {
-
     public static <S, T> T convertTo(S source, Supplier<T> targetSupplier) {
         return convertTo(source, targetSupplier, null);
     }

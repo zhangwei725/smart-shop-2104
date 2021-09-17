@@ -1,0 +1,23 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: rest-api-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "10.3.50.45:8848"
+    gateway:
+      routes:
+        - id: smart-member-router
+          uri: lb://smart-member
+          predicates:
+            - Path=/api/member/**
+          filters:
+            - StripPrefix=1
+        - id: smart-auth
+          uri: lb://smart-auth
+          predicates:
+            - Path=/api/auth/**
+          filters:
+            - StripPrefix=1

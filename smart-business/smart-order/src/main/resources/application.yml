@@ -18,6 +18,7 @@ spring:
         dashboard: 10.3.50.45:8088'
       # 立即加载
       eager: true
+
 logging:
   level:
     com.smart.order.mapper: debug
@@ -30,5 +31,9 @@ logging:
 # put     /api/v1.0/order/
 # delete  /api/v1.0/order/list
 
+rocketmq:
+  name-server: 10.3.50.45:9876
+  producer:
+    group: order-producer-group
 
 

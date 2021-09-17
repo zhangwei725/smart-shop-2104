@@ -8,7 +8,6 @@ spring:
     nacos:
       discovery:
         server-addr: "10.3.50.45:8848"
-        namespace: babd3d47-3ae3-4dcb-a6b1-e500e7977184
     # 将应用程序注册Sentinel
     sentinel:
       transport:

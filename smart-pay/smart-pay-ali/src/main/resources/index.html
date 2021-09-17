@@ -5,8 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-<form name=\"punchout_form\" method=\"post\"
-      action="https://openapi.alipaydev.com/gateway.do?alipay_sdk=alipay-easysdk-java-2.1.2&app_id=2016072900120438&charset=UTF-8&format=json&method=alipay.trade.page.pay&return_url=https%3A%2F%2Fwww.baidu.com&sign=FD4e88ov%2BPlZH5DO%2FSZeYKn98aHhHSEopSYS2xhBi%2BRciCV19cSJ6oU9Mw1I%2F%2BfNXyDpRikBFmanpfF%2BTvDmte%2FULs40QLPl6ZVxoQxA%2BDz2BenbDrEULfREeM94QLMacgagNPNTqrhLT0rf%2BXrGmMF48Kiviv5ZjQxZ9JgpMwi5WDLWeINMAAutJzkJnPmwLSTEgrIpteBBc957K%2BizXJ1XeG5A%2Fthz1BeZpR2soss9p2UPal2GPZAwUHU%2FDy%2ByjFdnqRrB3a9mT%2FkacVNc3yHvCWvOScTmPrLIc4YgPN3OoUk05E%2BdimV%2B8feX4oSVYruyY%2FFMMKDm1RO6g9ZZ0g%3D%3D&sign_type=RSA2&timestamp=2021-09-01+18%3A02%3A23&version=1.0\">\n<input type=\"hidden\" name=\"biz_content\" value=\"{&quot;out_trade_no&quot;:&quot;123&quot;,&quot;total_amount&quot;:&quot;0.01&quot;,&quot;subject&quot;:&quot;智慧商城-支付订单&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}\">\n<input type=\"submit\" value=\"立即支付\" style=\"display:none\" >\n</form>\n<script>document.forms[0].submit();</script>"
-
+<form name='punchout_form' method='post'
+      action='https://openapi.alipaydev.com/gateway.do?alipay_sdk=alipay-easysdk-java-2.1.2&app_id=2016072900120438&charset=UTF-8&format=json&method=alipay.trade.page.pay&return_url=https%3A%2F%2Fwww.baidu.com&sign=UTORPqmp2GK7%2B2VYFgMzO%2BPaqLszViBYnnIoDZ%2B1sWNXhwQOTVEWoWMJu0P75w8bXaFROO7MROoMgazi9Rdlef%2BUii4WgF5997haczTyHKIGk9nNx2e1hOx9MKxpHMgkHGGdwREsd97MV9O1gXy1hk6ErOabN%2B1mNCKvkk9rB2C771dodok4WPAx54ir1rep1vbFJq%2FXziV73Wj0kgT%2BTs%2FATNy5TquGOJAiYkUlqMiUFV7RigIquTRQe2YuBj40lmJ5m9p2YNdogzjsl5%2FC80uBl2RO%2B6SJfnJikcOI7OeeEpdm2ql16KUm%2BXoQcQWlUooFZWB2rNcGhr00oem%2B4g%3D%3D&sign_type=RSA2&timestamp=2021-09-02+09%3A32%3A42&version=1.0'>
+    <input type='hidden' name='biz_content'
+           value='{&quot;out_trade_no&quot;:&quot;123&quot;,&quot;total_amount&quot;:&quot;0.01&quot;,&quot;subject&quot;:&quot;智慧商城-支付订单&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}'>
+    <input type='submit' value='立即支付' style='display:none'>
+</form>
+<script>document.forms[0].submit();</script>
 </body>
 </html>
